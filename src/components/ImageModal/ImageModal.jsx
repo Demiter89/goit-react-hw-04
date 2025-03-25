@@ -9,11 +9,8 @@ export default function ImageModal({ onClose, image }) {
     <Modal
       isOpen={isOpen}
       className={css.modal}
-      //функція, яка викликається при кліку поза модалкою або натисканні Escape.
       onRequestClose={onClose}
-      //задає стиль для фону (оверлею) позаду модалки.
       overlayClassName={css.overlay}
-      //Перевіряє: якщо image існує (не null), рендерить вміст модалки.
     >
       {image && (
         <div className={css.cardmodal}>

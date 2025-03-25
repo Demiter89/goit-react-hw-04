@@ -5,7 +5,6 @@ import { FaSearch } from "react-icons/fa";
 
 const SearchBar = ({ onSearch }) => {
   const handleSubmit = (values, actions) => {
-    //Користувач не зможе відправити рядок, який містить лише пробіли.
     const trimmedTerm = values.searchInput.trim();
 
     actions.resetForm();
@@ -13,7 +12,7 @@ const SearchBar = ({ onSearch }) => {
       toast.error("Please enter a search term!");
       return;
     }
-    onSearch(trimmedTerm); // Передаємо значення в проп onSearch
+    onSearch(trimmedTerm);
     actions.resetForm();
   };
 
